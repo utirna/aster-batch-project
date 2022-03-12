@@ -9,7 +9,9 @@ let AuthMiddleware = {
       res["user"] = isValid;
       next();
     } catch (error) {
-      res.status(403).send({ status: false, message: "User not permitted" });
+      res
+        .status(403)
+        .send({ status: false, message: "User not permitted", error });
       return false;
     }
   },
