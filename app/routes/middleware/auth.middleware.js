@@ -4,6 +4,7 @@ const privateKey = process.env.PRIVATE_KEY;
 let AuthMiddleware = {
   checkAuth: async (req, res, next) => {
     let token = req.header("x_auth_token");
+
     try {
       isValid = jwt.verify(token, privateKey);
       res["user"] = isValid;
@@ -11,7 +12,7 @@ let AuthMiddleware = {
     } catch (error) {
       res
         .status(403)
-        .send({ status: false, message: "User not permitted", error });
+        .send({ status: false, message: "User not permitted", error, token });
       return false;
     }
   },
