@@ -1,0 +1,30 @@
+hosting : a area where we store our project code (ip) ===> map  domain eg. www.npmjs.com
+
+domain & hosting for websites
+godaddy
+google
+honstinger
+hostgetter
+mailesweb
+
+3 types of hosting
+  cloud hosting
+  vps (virtual private server )
+  shared hosting 
+
+# cloud hosting
+  aws amazon
+  azure microsoft
+  google cloud 
+  digital ocean
+
+#pm2 
+  npm i -g pm2 
+  pm2 start <app_name | id>
+  pm2 stop <app_name | id>
+  pm2 restart <app_name | id>
+  pm2 list
+  pm2 status
+  pm2 delete <app_name | id>
+  pm2 monit
+  pm2 init simple 
