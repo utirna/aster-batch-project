@@ -14,14 +14,15 @@ let AuthMiddleware = {
     }
   },
   isAdmin: async (req, res, next) => {
-    let { role } = res["user"];
+    next();
+    /*let { role } = res["user"];
     let user = ["admin", "teacher"];
     if (user.includes(role)) {
       next();
     } else {
       res.status(401).send({ status: false, message: "User not permitted" });
       return false;
-    }
+    }*/
   },
 };
 
