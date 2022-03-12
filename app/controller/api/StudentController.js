@@ -20,8 +20,6 @@ let StudentController = {
 
   saveNewStudent: async function (req, res) {
     user = res["user"];
-    res.send({ result: user });
-    return false;
     try {
       let data = req.body;
 
