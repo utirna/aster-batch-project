@@ -3,7 +3,7 @@ const privateKey = process.env.PRIVATE_KEY;
 
 let AuthMiddleware = {
   checkAuth: async (req, res, next) => {
-    let token = req.header("x_auth_token");
+    let token = req.headers("x_auth_token");
 
     try {
       isValid = jwt.verify(token, privateKey);
